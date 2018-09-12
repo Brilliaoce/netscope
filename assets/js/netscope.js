@@ -16607,7 +16607,6 @@ module.exports = Analyzer = class Analyzer {
 
         // power layers: computes outputs y = (shift + scale * x) ^ power
 	case "slice":
-	  slice_point = n.attribs.slice_param.slice_point.slice(0);
 	  d.wOut = d.wIn;
 	  d.hOut = d.hIn;
  	  d.chOut = d.chIn / 2;
