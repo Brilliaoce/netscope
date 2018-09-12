@@ -16606,6 +16606,11 @@ module.exports = Analyzer = class Analyzer {
         // --none
 
         // power layers: computes outputs y = (shift + scale * x) ^ power
+	case "slice":
+	  d.wOut = d.wIn;
+	  d.hOut = d.hIn;
+ 	  d.chOut = d.chIn;
+	  break;      
         case "power":
           params = n.attribs.power_param;
           power = (ref54 = params.power) != null ? ref54 : 1;
