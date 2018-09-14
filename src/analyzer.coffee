@@ -80,7 +80,7 @@ module.exports =
                         #memory
                         d.mem.param = (kernel_w*kernel_h)*d.chIn*d.chOut/group + has_bias*d.chOut
                     else  # convolutiondepthwise
-                        d.comp.macc = (kernel_w*kernel_h)*(d.wOut*d.hOut)*d.chIn*d.batchOut + (d.wOut*d.hOut)*d.chIn*d.chOut*d.batchOut/group
+                        d.comp.macc = (kernel_w*kernel_h)*(d.wOut*d.hOut)*d.chIn*d.batchOut # + (d.wOut*d.hOut)*d.chIn*d.chOut*d.batchOut/group
                         d.mem.param = (kernel_w*kernel_h)*d.chIn + has_bias*d.chIn + d.chIn*d.chOut/group + has_bias*d.chOut
 
                     d.mem.activation = (d.wOut*d.hOut)*d.chOut*d.batchOut
