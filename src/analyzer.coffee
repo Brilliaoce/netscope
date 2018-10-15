@@ -357,7 +357,16 @@ module.exports =
                     # --none
                     #memory
                     # --none
-
+                when "upsample"
+                    #dimensions
+                    ## assume pass-through
+                    d.wOut = d.wIn * 2
+                    d.hOut = d.hIn * 2
+                    d.chOut = d.chIn
+                    #computation
+                    # --none
+                    #memory
+                    # --none
                 # power layers: computes outputs y = (shift + scale * x) ^ power
                 when "power"
                     params = n.attribs.power_param
