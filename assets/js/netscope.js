@@ -16610,7 +16610,12 @@ module.exports = Analyzer = class Analyzer {
 	  d.wOut = d.wIn;
 	  d.hOut = d.hIn;
  	  d.chOut = d.chIn / 2; //just for shufflenetv2 
-	  break;      
+	  break;
+	case "upsample":
+	  d.wOut = d.wIn * 2;
+	  d.hOut = d.hIn * 2;
+	  d.chOut = d.chIn; 
+	  break;	      
         case "power":
           params = n.attribs.power_param;
           power = (ref54 = params.power) != null ? ref54 : 1;
