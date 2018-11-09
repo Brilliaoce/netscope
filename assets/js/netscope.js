@@ -16607,10 +16607,11 @@ module.exports = Analyzer = class Analyzer {
 
         // power layers: computes outputs y = (shift + scale * x) ^ power
 	case "slice":
+	  params = n.attribs.slice_param
 	  ref58 = n.parents;
 	  d.wOut = d.wIn;
 	  d.hOut = d.hIn;
- 	  d.chOut = d.chIn / ref58.length; //just for shufflenetv2 
+ 	  d.chOut = d.chIn / params.slice_point.length; //just for shufflenetv2 
 	  break;
 	case "upsample":
 	  d.wOut = d.wIn * 2;
