@@ -16609,7 +16609,7 @@ module.exports = Analyzer = class Analyzer {
 	case "slice":
 	  d.wOut = d.wIn;
 	  d.hOut = d.hIn;
- 	  d.chOut = d.chIn / 2; //just for shufflenetv2 
+ 	  d.chOut = d.chIn / 3; //just for shufflenetv2 
 	  break;
 	case "upsample":
 	  d.wOut = d.wIn * 2;
