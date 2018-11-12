@@ -16611,7 +16611,7 @@ module.exports = Analyzer = class Analyzer {
 	  ref58 = n.parents;
 	  d.wOut = d.wIn;
 	  d.hOut = d.hIn;
- 	  d.chOut = d.chIn / params.slice_point.length; //just for shufflenetv2 
+ 	  d.chOut = d.chIn / params.slice_point.length + 1; //just for shufflenetv2 
 	  break;
 	case "upsample":
 	  d.wOut = d.wIn * 2;
